@@ -42,21 +42,9 @@
 Вот пример одной из первых программ, которую я написал, изучая основы:
 
 ```python
-# Простая программа-калькулятор
-def calculator(a, b, operation):
-    if operation == '+':
-        return a + b
-    elif operation == '-':
-        return a - b
-    elif operation == '*':
-        return a * b
-    elif operation == '/':
-        if b != 0:
-            return a / b
-        else:
-            return "Ошибка: деление на ноль!"
-    else:
-        return "Неизвестная операция"
-
-# Проверяем работу функции
-print(calculator(5, 3, '+'))  # Выведет: 8
+# Программа для вывода полных квадратов из отрезка [1; 100000]
+for num in range(1, 100001):
+    # Проверяем, является ли число полным квадратом
+    root = int(num ** 0.5)  # Извлекаем квадратный корень
+    if root * root == num:  # Проверяем, дает ли возведение в квадрат исходное число
+        print(num)
